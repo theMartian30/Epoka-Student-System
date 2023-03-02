@@ -1,10 +1,10 @@
 # Epoka-Student-System
 This project is a desktop app that has a log-in system for two types of accounts - that is, administrators and students - with all data stored on phpMyAdmin database.
 Special design features are used to distinguish titles by using Shadow object and other designs like button hovering, all found in the overriden *initialize* method and in the *application.css* file.
-**Admin Page\n**
+# **Admin Page**
 At the admin page, every action is initiated in a single anchor pane where functions like add, remove, update and grade a student are located. Each of them have different data fields, based on the funcionality, but we should firmly say that the username field is the most important one, since it is considered as the primary key of the database to distinguish each individual. 
 A side pane holds the photo and the unique information of the admin who has entered through the log-in system. A new admin cannot be added to the database system from the app, but only by modifying the database directly.
-**Student Page**
+# **Student Page**
 On this page, four buttons (Home, Profile, Courses, Transcript respectively) control the transitions between subpages. At the same pane where these buttons are located, a text field and another button can be used to change the password of the student. One thing that stands out to the user is an animation at the top which is in motion for a duration of 15 seconds each time a transparent button is clicked on its place.
 At Home page, superficial information about the university is shown together with a pane welcoming the user.
 The profile page, as its name stands, displays all the information found in the database for the student, with a button to add a photo (it is the only non-functional part of the program since a web server is needed to store images non-locally). CGPA is consistently updated.
