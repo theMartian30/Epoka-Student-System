@@ -1,0 +1,76 @@
+
+.login-bg{
+	-fx-background-color:linear-gradient(to bottom right,#26471C,#662d60);
+}
+
+.exit{
+	-fx-background-color:#c22c40;
+	-fx-background-radius:10px;
+	-fx-cursor: hand;
+}
+
+.exit:hover{
+	-fx-background-color:#f15b72;
+}
+
+.textfield-design{ /*original style */
+	-fx-background-color:transparent;
+	-fx-background-radius:10px;
+	-fx-border-color:linear-gradient(to bottom right,#26471C,#662d60);
+	-fx-border-radius:10px;
+	-fx-text-inner-color:#000;
+}
+
+.textfield-passwordChange-design{ /*original style */
+	-fx-background-color:transparent;
+	-fx-background-radius:10px;
+	-fx-border-color:linear-gradient(to bottom right,#26471C,#662d60);
+	-fx-border-radius:10px;
+	-fx-text-inner-color:#ffffff;
+}
+
+.button-design{
+	-fx-background-color:linear-gradient(to bottom right,#26471C,#662d60);
+	-fx-background-radius:20px;
+	-fx-cursor:hand;
+}
+
+.button-design:hover{
+	-fx-background-color: linear-gradient(to bottom left,#517ab5,#ae44a5);
+}
+
+.button-addimage{
+	-fx-background-color: linear-gradient(to bottom right,#e2dfdf,#807d7d);
+	-fx-background-radius:20px;
+	-fx-cursor:hand;
+}
+.button-addimage:hover{
+	-fx-background-color: linear-gradient(to bottom right,#e9e1e1,#cec5c5);
+	-fx-border-radius:10px;
+}
+
+.button-logout-design{
+	-fx-background-color:linear-gradient(to bottom right,#6c87a3,#103d70);
+	-fx-background-radius:20px;
+	-fx-cursor:hand;
+}
+
+.button-logout-design:hover{
+	-fx-background-color: linear-gradient(to bottom left,#ffffff,#1d5cae);
+}
+
+.navbutton{
+	-fx-background-color:linear-gradient(rgba(121,172,255,0.2), rgba(255,106,239,0.2));
+}
+.navbutton:hover{
+	-fx-background-color:linear-gradient(rgba(121,172,255,0.6), rgba(255,106,239,0.6));
+}
+
+.button-image{
+	-fx-background-color:transparent;
+	-fx-background-radius:20px;
+}
+.button-image:hover{
+	-fx-background-color: linear-gradient(to bottom right,#e9e1e1,#cec5c5);
+	-fx-border-radius:10px;
+	}

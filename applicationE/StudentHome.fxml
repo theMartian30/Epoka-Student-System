@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationE.StudentHomeController">
+   <children>
+      <AnchorPane layoutX="-3.0" layoutY="-2.0" prefHeight="600.0" prefWidth="180.0" styleClass="login-bg" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="home_btn" layoutX="15.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#changePage" onMouseDragged="#changePage" prefHeight="30.0" prefWidth="160.0" styleClass="navbutton" stylesheets="@application.css" text="Home" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="230.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="profile_btn" layoutX="14.0" layoutY="282.0" mnemonicParsing="false" onMouseClicked="#changePage" onMouseDragged="#changePage" prefHeight="30.0" prefWidth="160.0" styleClass="navbutton" stylesheets="@application.css" text="Profile" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="270.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="courses_btn" layoutX="15.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#changePage" onMouseDragged="#changePage" prefHeight="30.0" prefWidth="160.0" styleClass="navbutton" stylesheets="@application.css" text="Courses" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="310.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="transcript_btn" layoutX="15.0" layoutY="384.0" mnemonicParsing="false" onAction="#changePage" prefHeight="30.0" prefWidth="160.0" styleClass="navbutton" stylesheets="@application.css" text="Transcript" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="350.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="logout_btn" layoutX="57.0" layoutY="525.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="60.0" styleClass="button-logout-design" stylesheets="@application.css" text="Log Out" AnchorPane.leftAnchor="60.0" />
+            <Button fx:id="changePassword_btn" layoutX="30.0" layoutY="476.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="30.0" prefWidth="120.0" styleClass="button-logout-design" stylesheets="@application.css" text="Change password" />
+            <TextField fx:id="tfpassword" layoutX="16.0" layoutY="439.0" onKeyTyped="#tfpasswordDesign" onMouseClicked="#tfpasswordDesign" onMouseDragged="#tfpasswordDesign" promptText="New Password" styleClass="textfield-design" stylesheets="@application.css" />
+            <Circle fx:id="c1" fill="#ffffff00" layoutX="90.0" layoutY="94.0" radius="80.0" stroke="#00f2ff" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 40;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0" />
+            <Circle fx:id="c2" fill="#ffffff00" layoutX="91.0" layoutY="110.0" radius="58.0" stroke="#ff009a" strokeType="INSIDE" strokeWidth="7.0" style="-fx-stroke-dash-array: 30;" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0" />
+            <Circle fx:id="c3" fill="#ffffff00" layoutX="91.0" layoutY="110.0" radius="42.0" stroke="#9cff00" strokeType="INSIDE" strokeWidth="7.0" style="-fx-stroke-dash-array: 25;" />
+            <Button fx:id="play_btn" layoutX="6.0" layoutY="29.0" mnemonicParsing="false" onAction="#play" prefHeight="160.0" prefWidth="167.0" style="-fx-background-color: 0;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="211.0" layoutY="1.0" prefHeight="30.0" prefWidth="820.0" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="exit_btn" layoutX="760.0" layoutY="-3.0" mnemonicParsing="false" onAction="#exit3" prefHeight="24.0" prefWidth="50.0" styleClass="exit" stylesheets="@application.css" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0" />
+            <ImageView fitHeight="18.0" fitWidth="24.0" layoutX="784.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/ex-8GaKKJ4CE.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="home_page1" layoutX="180.0" layoutY="30.0" prefHeight="150.0" prefWidth="820.0" styleClass="login-bg" stylesheets="@application.css">
+         <children>
+            <Label layoutX="152.0" layoutY="40.0" prefHeight="72.0" prefWidth="260.0" text="Welcome" textFill="WHITE" AnchorPane.leftAnchor="150.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="64.0" />
+               </font>
+            </Label>
+            <Label fx:id="welcome_label" layoutX="478.0" layoutY="39.0" prefHeight="72.0" prefWidth="260.0" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="64.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="home_page2" layoutX="180.0" layoutY="180.0" prefHeight="421.0" prefWidth="820.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="210.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/epoka_university_facilities.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="26.0" layoutY="141.0" prefHeight="27.0" prefWidth="160.0" text="Home to more than" textFill="#272f9d">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="183.0" text="1400" textFill="#272f9d">
+               <font>
+                  <Font name="Berlin Sans FB" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="245.0" text="students" textFill="#272f9d">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="606.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/Logo_e_Universitetit_Epoka.svg.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="profile_page" layoutX="180.0" layoutY="5.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="226.0" layoutX="43.0" layoutY="43.0" stroke="BLACK" strokeType="INSIDE" width="219.0" />
+            <ImageView fitHeight="209.0" fitWidth="207.0" layoutX="49.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" />
+            <Button layoutX="49.0" layoutY="52.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="207.0" styleClass="button-image" stylesheets="@application.css" />
+            <Label layoutX="354.0" layoutY="66.0" text="Username:" AnchorPane.bottomAnchor="477.6666666666667" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="65.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="357.0" layoutY="147.0" text="Name:" AnchorPane.bottomAnchor="397.6666666666667" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="145.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="357.0" layoutY="239.0" text="Surname:" AnchorPane.bottomAnchor="307.6666666666667" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="235.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="90.0" layoutY="331.0" text="Birthday:" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="90.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="434.0" text="Birthplace:" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="90.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="471.0" layoutY="330.0" text="ID:" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="470.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="465.0" layoutY="436.0" text="CGPA:" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="470.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="username" layoutX="591.0" layoutY="70.0" prefHeight="17.0" prefWidth="120.0" stylesheets="@application.css" AnchorPane.bottomAnchor="477.0" AnchorPane.leftAnchor="590.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="name" layoutX="596.0" layoutY="150.0" prefWidth="110.0" stylesheets="@application.css" AnchorPane.bottomAnchor="397.0" AnchorPane.leftAnchor="590.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="surname" layoutX="599.0" layoutY="231.0" prefHeight="31.0" prefWidth="110.0" stylesheets="@application.css" AnchorPane.bottomAnchor="307.6666666666667" AnchorPane.leftAnchor="590.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="birthday" layoutX="260.0" layoutY="330.0" prefHeight="31.0" prefWidth="150.0" stylesheets="@application.css" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="260.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="ID" layoutX="636.0" layoutY="330.0" prefHeight="31.0" prefWidth="110.0" stylesheets="@application.css" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="610.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="birthplace" layoutX="260.0" layoutY="435.0" prefHeight="31.0" prefWidth="150.0" stylesheets="@application.css" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="260.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="CGPA" layoutX="638.0" layoutY="436.0" prefHeight="31.0" prefWidth="110.0" stylesheets="@application.css" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="610.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="courses_page" layoutX="213.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <TableView fx:id="coursesTable" layoutX="33.0" layoutY="68.0" prefHeight="200.0" prefWidth="451.0" styleClass="textfield-design" stylesheets="@application.css" AnchorPane.leftAnchor="30.0">
+              <columns>
+                <TableColumn fx:id="code" prefWidth="111.99998474121094" text="Code" />
+                <TableColumn fx:id="course_name" prefWidth="336.0" text="Course Name" />
+              </columns>
+            </TableView>
+            <Label layoutX="48.0" layoutY="17.0" text="Selected Courses:">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <ListView fx:id="compulsory_lv" layoutX="32.0" layoutY="327.0" prefHeight="200.0" prefWidth="200.0" styleClass="textfield-design" stylesheets="@application.css" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="30.0" />
+            <ListView fx:id="tech_lv" layoutX="291.0" layoutY="314.0" prefHeight="200.0" prefWidth="200.0" styleClass="textfield-design" stylesheets="@application.css" AnchorPane.bottomAnchor="40.0" />
+            <Label layoutX="54.0" layoutY="285.0" text="Compulsory Courses:">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="322.0" layoutY="285.0" text=" Technical elective:">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="568.0" layoutY="285.0" text=" Non-technical elective:">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <ListView fx:id="nontech_lv" layoutX="555.0" layoutY="330.0" prefHeight="200.0" prefWidth="200.0" styleClass="textfield-design" stylesheets="@application.css" AnchorPane.bottomAnchor="40.0" />
+            <Button fx:id="addCourses_btn" layoutX="599.0" layoutY="147.0" mnemonicParsing="false" onAction="#addCoursesDatabase" styleClass="button-design" stylesheets="@application.css" text="Add Courses" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="transcript_page" layoutX="213.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <TableView fx:id="gradesTable" layoutX="137.0" layoutY="164.0" prefHeight="200.0" prefWidth="560.0" styleClass="textfield-design" stylesheets="@application.css" AnchorPane.bottomAnchor="205.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="165.0">
+              <columns>
+                <TableColumn fx:id="course_grades" prefWidth="360.0" text="Course" />
+                  <TableColumn fx:id="midterm_grades" prefWidth="100.0" text="Midterm" />
+                  <TableColumn fx:id="final_grades" prefWidth="100.0" text="Final" />
+              </columns>
+            </TableView>
+            <Label layoutX="69.0" layoutY="53.0" text="Interim Grades">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="439.0" text="Name:">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="296.0" layoutY="439.0" text="Surname:">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="558.0" layoutY="439.0" text="CGPA:">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="transcriptName" layoutX="130.0" layoutY="439.0" prefHeight="21.0" prefWidth="139.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="transcriptSurname" layoutX="374.0" layoutY="439.0" prefHeight="21.0" prefWidth="150.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="transcriptCGPA" layoutX="615.0" layoutY="439.0" prefHeight="21.0" prefWidth="67.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="download_btn" layoutX="384.0" layoutY="506.0" mnemonicParsing="false" onAction="#download" prefHeight="35.0" prefWidth="150.0" styleClass="button-design" stylesheets="@application.css" text="Download transcript" textFill="WHITE" AnchorPane.leftAnchor="335.0" AnchorPane.rightAnchor="335.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
